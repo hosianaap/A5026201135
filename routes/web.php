@@ -31,6 +31,10 @@ Route::get('ETS', function () {
     return view('htmlETS');
 });
 
+// Tugas PHP
+Route::get('isianLinearSearch', "ViewController@FormLinearSearch");
+Route::post('hasilLinearSearch', "ViewController@ResultLinearSearch");
 
-Route::get('isiannama', "ViewController@showForm") ;
-Route:: post('greetings', "ViewController@resultGreetings") ;
+
+// Route::get('isiannama', "ViewController@showForm") ;
+// Route:: post('greetings', "ViewController@resultGreetings") ;

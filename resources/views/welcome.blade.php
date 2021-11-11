@@ -91,9 +91,9 @@
                     <a href="tugas_3/hosiana_bootstrap.html"> Tugas 3</a>
                     <a href="hosiana_praktikum_1.html"> Praktikum 1</a>
                     <a href="tugas_4"> Tugas 4</a>
-                    <a href=""> Praktikum 2 </a>
+                    <a href="praktikum_2"> Praktikum 2 </a>
                     <a href="ETS"> ETS </a>
-                    <a href="isiannama"> Tugas PHP </a>
+                    <a href="isianLinearSearch"> Tugas PHP </a>
                 </div>
             </div>s
         </div>
