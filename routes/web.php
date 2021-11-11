@@ -18,7 +18,12 @@ Route::get('/', function () {
 
 // Tugas 4
 Route::get('tugas_4', function () {
-    return view('htmlTugas4');
+    return view('Tugas4');
+});
+
+// Praktikum 2
+Route::get('praktikum_2', function () {
+    return view('Praktikum2');
 });
 
 // ETS

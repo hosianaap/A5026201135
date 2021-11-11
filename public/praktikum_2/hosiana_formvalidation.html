@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Form Validation </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+
+    input[type="text"],
+    input[type="password"], input[type="number"]{
+        font-size: medium;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    p, h3 {
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
+
+
+
+<body>
+    <section class="w-100"  style="background-image: linear-gradient(#0F2027, #203A43,#2C5364)">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="card">
+                <img class="card-img-top" src="code.jpg">
+                <h3 class="card-title mt-3 text-center"> Form Registration </h3>
+                <div class="card-body pt-2 pb-2 pl-3 pr-3">
+                    <form id="form-validation" action="https://www.geeksforgeeks.org/">
+                        <div class="form-group mb-4">
+                            <label for="name"> Name </label>
+                            <input type="text" id="name" class="form-control" placeholder="Name">
+                            <p id="name-message" class="text-danger mt-1"> </p>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="address"> Address </label>
+                            <input type="text" id="address" class="form-control" placeholder="Address">
+                            <p id="address-message" class="text-danger  mt-1"> </p>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="email"> E-mail Address </label>
+                            <input type="text" id="email" class="form-control" placeholder="E-mail">
+                            <p id="email-message" class="text-danger mt-1"> </p>
+
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="password"> Password </label>
+                            <input type="password" id="password" class="form-control" placeholder="Password">
+                            <p id="password-message" class="text-danger  mt-1"> </p>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="phone"> Telephone </label>
+                            <input type="number" id="phone" class="form-control" placeholder="Telephone">
+                            <p id="phone-message" class="text-danger  mt-1"> </p>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="course"> Select Your Course </label>
+                            <select id="course" class="form-control" placeholder="Course">
+                                <option value="0"></option>
+                                <option value="1">BTECH</option>
+                                <option value="2">BBA</option>
+                                <option value="3">BCA</option>
+                                <option value="4">B.COM</option>
+                                <option value="5">GEEKFORGEEKS</option>
+                            </select>
+                            <p id="course-message" class="text-danger  mt-1"> </p>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="zipCode"> Zip Code </label>
+                            <input type="number" id="zipCode" class="form-control" placeholder="Zip Code">
+                            <p id="zip-message" class="text-danger  mt-1"> </p>
+                        </div>
+
+                        <button type="submit" id="submit" class="btn btn-primary btn-block"> Submit</button>
+                        <button type="button" id="reset" class="btn btn-danger btn-block"> Reset</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+
+        $("#submit").click(function (event) {
+
+            
+            // Name
+            var inputName = $("#name").val();
+            var letters = /^[a-zA-Z]*$/;
+            if (inputName == "") {
+                $("#name-message").text("Name must be filled");
+                event.preventDefault();
+            }
+            else if (!inputName.match(letters)) {
+                $("#name-message").text("Name must be in alphabets");
+                event.preventDefault();
+            }
+
+            // Address
+            var inputAddress = $("#address").val();
+            if (inputAddress == "") {
+                $("#address-message").text("Address must be filled");
+                event.preventDefault();
+            }
+
+            // e-mail
+            var inputEmail = $("#email").val();
+            if (inputEmail == ""){
+                $("#email-message").text("E-mail address must be filled");
+                event.preventDefault();
+            }
+            else if (inputEmail.indexOf("@") == 0) {
+                $("#email-message").text("Invalid email");
+                event.preventDefault();
+            }
+
+            // Password
+            var inputPassword = $("#password").val();
+
+            if (inputPassword == ""){
+                $("#password-message").text("Password must be filled");
+                event.preventDefault();
+            }
+            else if (inputPassword.length < 8 ||  inputPassword.length > 16) {
+                $("#password-message").text("Password must between 8-16 character");
+                event.preventDefault();
+            }
+
+            // Telephone
+            var inputPhone = $("#phone").val();
+            if (inputPhone == "") {
+                $("#phone-message").text("Telephone must be filled");
+                event.preventDefault();
+            }
+            else if (inputPhone.length < 7) {
+                $("#phone-message").text("Telephone must have more than 7 digits");
+                event.preventDefault();
+            }
+
+            // Course
+            var inputCourse = $("#course").val();
+
+            if (inputCourse == "0") {
+                $("#course-message").text("Course must be choosed");
+                event.preventDefault();
+            }
+
+            // Zip Code
+            var inputZip = $("#zipCode").val();
+
+            if (inputZip == "") {
+                $("#zip-message").text("Zip Code must be filled");
+                event.preventDefault();
+            }
+
+        });
+
+        $("#reset").click(function () {
+            
+            var resetForm = $(this).closest('form');
+            
+            resetForm.find("input[type=number],input[type=text], input[type=password], select").val("");
+            $("p").hide();
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
