@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", inital-scale=1.0">
+    <title> Hosiana Arga Putri </title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    *
+    {
+        margin: 0;
+    }
+        
+    body 
+    {
+        min-height: 100vh;
+        scroll-behavior:smooth;
+    }
+
+    header 
+    {
+        background-color: #fefbe9;
+        justify-content: space-between;
+    }
+
+    header img 
+    {
+        width: 250px;
+        height: 250px;
+        display: block;
+        margin: auto auto;
+        margin-top:20px;
+        padding: 5px;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    header img:hover
+    {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    header img::before
+    {
+        transform: translateX(-100%);
+        padding-right: 4px;
+    }
+
+    header img::after 
+    {
+        display: inline-block;
+        padding-left: 4px;
+    }
+
+    .profile
+    {
+        background: #fefbe9;
+        padding: 5px;
+    }
+    
+    h2 
+    {
+        cursor: pointer;
+        color: #f0a04b;
+        text-align: center;
+        font-size: 2em;
+        letter-spacing: 1.5px;
+        font-family: 'Sora', sans-serif;
+    }
+
+    h2::after
+    {
+        content: ' ';
+        position: absolute;
+        height: 1em;
+        left: 0;
+        width:100%;
+        border-bottom:2.5px solid;
+        margin-top:10px;
+        opacity:0;
+        -webkit-transition: 0.3s;
+        transition: opacity 0.3s;  
+    }
+
+    h2:hover::after
+    {
+        opacity:2;
+        -webkit-transform: scale(1);
+        transform: scale(1);    
+    }
+
+    .profile p {
+        margin: 20px 80px 20px 80px;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color:#c99379;
+    }
+
+    .hobbies 
+    {
+        margin: 0;
+        padding: 5px;
+        background-color: #e1eedd;
+    }
+
+    .hobbies p 
+    {
+        left:20px;
+        margin : 20px;
+        color: #183a1d;
+        font-family: 'Quicksand', sans-serif;
+    }   
+
+    .hobbies ul li 
+    {
+        color: #183a1d;
+        list-style-type: upper-alpha;
+        font-weight: normal;
+        font-family : 'Quicksand', sans-serif;
+    }
+
+    .experiences 
+    {
+        background: #fefbe9;
+        padding: 5px;
+    }
+
+    #table 
+    {
+        margin-top:20px;
+        margin-bottom : 20px;
+        font-family:'Quicksand', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: normal;
+        table-layout: fixed;
+        width: 900px;
+    }
+
+    th 
+    {
+        background-color:#FAEAD6ff ;
+    }
+
+    #row_1 
+    {
+        background-color: #DCE9F2ff ;
+    }
+
+    #row_2 
+    {
+        background-color: #FAEEEBff;
+    }
+
+    #row_3 
+    {
+        background-color: #C5E3C1ff;
+    }
+
+    .contact 
+    {
+        padding:30px;
+        background-color: #183a1d;
+    }
+
+    .contact p 
+    {
+        margin-top: 20px;
+        text-align: center;
+        color: #e1eedd;
+        font-size: 1.5em;
+        font-family: 'Quicksand',sans-serif;
+    }
+
+    .contact a 
+    {
+        text-decoration: none;
+        color : #f6c453;
+    }
+
+    .contact a:hover
+    {
+        color : #DCE9F2ff;
+    }
+</style>
+    
+<body>
+    <header>
+        <h2> Hosiana Arga Putri </h2>
+        <img src="profile.jpg" alt="Hosiana Arga Putri">
+    </header>
+
+    <section class="profile">
+        <h2> Profile </h2>
+        <p> 
+            Hello! I'm Hosiana Arga Putri, an undergraduate student of Information Systems at Institut Teknologi Sepuluh Nopember.
+            Experienced in UI/UX, I have achieved top 8 UI design in Information Systems Competition (ISCOM) 2021 held by ITS Information
+            Sytems Student Association (HMSI ITS)
+        </p>
+    </section>
+
+    <section class="hobbies">
+        <h2><b> Hobbies</b></h2>
+        <p> I have a lot of hobbies and each favorites of them are :  <br>
+            <ul>
+                <li> Reading books  : <cite><b> The Invisible Life of Addie LaRue </li>
+                <li> Listening to the music : <cite><b> White Ferrari </b></cite> by Frank Ocean  </li>
+                <li> Watching movies : <cite><b> The Imitation Game </b></cite>    </li>
+            </ul>            
+        </p>
+    </section>
+
+    <section class="experiences">
+        <h2> Experiences </h2>
+        <table border="1" id="table">
+            <tr>
+                <th width=250>  Organization and Intern  </th>
+                <th width=400> Job description </th>
+            </tr>
+            <tr id="row_1">
+                <td> Fundraising Staff of StudentsxCEOs League (2021) </td>
+                <td>
+                    <ol>
+                        <li>
+                            Raise funds by creating merchandise ideas and business units
+                        </li>
+                        <li>
+                            Manage cashflow and finance report
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr id="row_2">
+                <td> Fundraising Staff of Surabaya MUN (2021) </td>
+                <td> 
+                    <ol>
+                        <li>
+                            Raise funds by creating creative merchandise ideas
+                        </li>
+                        <li>
+                            Establish and mantain good relationships with vendors on a regular basis
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr id="row_3">
+                <td> Product Design Intern Staff of Digiflux (2021) </td>
+                <td>
+                    <ol>
+                        <li>
+                            Create workflow, wireframe, prototype, and user interface for website-mobile product 
+                        </li>
+                        <li>
+                            Collaborate with Business Operations and Web Developer to find effective solutions related to
+                            the development and product visualization
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="contact">
+        <h2><b> Contacts </b></h2>
+        <p> Feel free to reach me on 
+            <a href="https://instagram.com/hosianaap"> Instagram</a>, 
+            <a href="https://www.linkedin.com/in/hosianaarga/"> LinkedIn</a>,
+            <a href="https://dribbble.com/hosianaarga"> Dribbble</a>. 
+            Thank you!
+        </p>   
+    </section>
+</body>
+
+</html>
