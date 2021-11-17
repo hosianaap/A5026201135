@@ -21,6 +21,11 @@ Route::get('tugas_4', function () {
     return view('Tugas4');
 });
 
+//Tugas 5
+Route::get('tugas_5', function () {
+    return view('Tugas5');
+});
+
 // Praktikum 2
 Route::get('praktikum_2', function () {
     return view('Praktikum2');
