@@ -8,7 +8,7 @@
 </ul>
 @endsection
 
-@section('judulbagian', 'Tambah Data Pegawai')
+@section('judulbagian', 'Edit Data Pegawai')
 @section('konten')
 	@foreach($pegawai as $p)
 	<form action="/pegawai/update" method="post">
