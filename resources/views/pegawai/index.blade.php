@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h2>www.malasngoding.com</h2>
-	<h3>Data Pegawai</h3>
+@section('side-navbar')
+<ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="/pegawai" > Pegawai </a></li>
+    <li><a href="/absen"> Absen </a></li>
+    <li> <a href="#"> Praktikum </a> </li>
+</ul>
+@endsection
 
-	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
-
-	<br/>
-	<br/>
-
-	<table border="1">
+@section('judulbagian', 'Data Pegawai')
+@section('konten')
+	<table class="table">
+    <thead class="thead">
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
@@ -28,15 +26,19 @@
 			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
-				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
+
+				<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="label label-info"> Edit</a>
 				|
-				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+				<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="label label-danger">Hapus</a>
 
             </td>
 		</tr>
+
 		@endforeach
+     <thead>
 	</table>
 
-
-</body>
-</html>
+    <div class="d-flex text-center">
+        <a href="/pegawai/tambah" class="btn btn-primary"> Tambah Data</a>
+    </div>
+@endsection
