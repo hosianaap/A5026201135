@@ -95,8 +95,9 @@
                     <a href="praktikum_2"> Praktikum 2 </a>
                     <a href="ETS"> ETS </a>
                     <a href="isianLinearSearch"> Tugas PHP </a>
+                    <a href="pegawai"> CRUD </a>
                 </div>
-            </div>s
+            </div>
         </div>
     </body>
 </html>
