@@ -4,7 +4,7 @@
 <ul class="nav nav-pills nav-stacked">
     <li class="active"><a href="/pegawai" > Pegawai </a></li>
     <li><a href="/absen"> Absen </a></li>
-    <li> <a href="#"> Praktikum </a> </li>
+    <li> <a href="/beras"> Beras </a> </li>
 </ul>
 @endsection
 
