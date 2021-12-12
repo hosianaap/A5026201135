@@ -22,6 +22,7 @@
 
     body {
         background-color: #c8d8e4;
+        min-height: 100vh;
     }
 
     .jumbotron {
@@ -51,9 +52,8 @@
     }
 
     footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+        position: sticky;
+        top: 100%;
         background-color: #2b6777;
     }
 
@@ -68,7 +68,7 @@
                 <div class="col-md-2">
                     <img src="https://sipmaba.its.ac.id/uploads/foto/120382030299.jpeg" class="center-block" width="70">
                 </div>
-                <div class="col-md-10 order-1 align-center">
+                <div class="col-md-10 order-1">
                         <br>
                         <h4> Hosiana Arga Putri </h4>
                         <h4> 5026201135
@@ -92,7 +92,7 @@
         <ul class="nav navbar-nav">
             <li> <a href="/pegawai"> Pegawai </a></li>
             <li><a href="/absen"> Absen </a></li>
-            <li> <a href="#"> Praktikum </a> </li>
+            <li> <a href="/beras"> Beras </a> </li>
         </ul>
         </div>
     </div>
