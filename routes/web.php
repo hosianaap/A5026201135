@@ -72,3 +72,9 @@ Route::post('/beras/update','BerasController@update');
 Route::get('/beras/hapus/{id}','BerasController@hapus');
 Route::get('/beras/cari','BerasController@cari');
 Route::get('/beras/view/{id}','BerasController@detail');
+
+// route CRUD Karyawan 1
+Route::get('/karyawan1','Karyawan1Controller@index');
+Route::get('/karyawan1/edit/{id}','Karyawan1Controller@edit');
+Route::post('/karyawan1/update','Karyawan1Controller@update');
+Route::get('/karyawan1/view/{id}','Karyawan1Controller@detail');

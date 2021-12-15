@@ -5,6 +5,7 @@
     <li class="active"><a href="/pegawai" > Pegawai </a></li>
     <li><a href="/absen"> Absen </a></li>
     <li> <a href="/beras"> Beras </a> </li>
+    <li> <a href="/karyawan1"> EAS - Soal C3 </a> </li>
 </ul>
 @endsection
 
